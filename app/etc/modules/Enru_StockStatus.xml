@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Enru_StockStatus>
+            <codePool>local</codePool>
+            <active>true</active>
+            <depends>
+                <Mage_Catalog/>
+            </depends>
+        </Enru_StockStatus>
+    </modules>
+</config>

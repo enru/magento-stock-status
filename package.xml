@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Enru_StockStatus</name>
+    <version>0.1.1</version>
+    <stability>devel</stability>
+    <license uri="https://www.gnu.org/licenses/gpl-2.0.html">GPL2</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Sets stock status of a product based on its quantity.</summary>
+    <description>This extension returns a product back to "in stock" status when it has a quantity greater than zero. &#xD;
+&#xD;
+</description>
+    <notes>Sets stock status.</notes>
+    <authors><author><name>Neill Russell</name><user>enru</user><email>n@enru.co.uk</email></author></authors>
+    <date>2015-04-30</date>
+    <time>12:42:31</time>
+    <contents><target name="magelocal"><dir name="Enru"><dir name="StockStatus"><dir name="Model"><file name="Observer.php" hash="65fdc1848159705cb926f35c066e8f28"/></dir><dir name="etc"><file name="config.xml" hash="2d375e0704427bfc3bea93e574ff8709"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Enru_StockStatus.xml" hash="e60c1cecd0d7a0018ce6364d522ab0fc"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.4</min><max>6.0.0</max></php></required></dependencies>
+</package>

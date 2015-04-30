@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Enru_StockStatus>
+            <version>0.1.1</version>
+        </Enru_StockStatus>
+    </modules>
+
+    <global>
+        <models>
+            <enrustockstatus>
+                 <class>Enru_StockStatus_Model</class>
+            </enrustockstatus>
+        </models>
+    </global>
+
+    <adminhtml>
+        <events>
+            <catalog_product_save_before>
+                <observers>
+                    <enrustockstatus>
+                        <class>Enru_StockStatus_Model_Observer</class>
+                        <method>setStockStatus</method>
+                    </enrustockstatus>
+                </observers>
+            </catalog_product_save_before>
+        </events>
+    </adminhtml>
+
+    <default>
+        <enrustockstatus>
+        </enrustockstatus>
+    </default>
+
+
+</config>
