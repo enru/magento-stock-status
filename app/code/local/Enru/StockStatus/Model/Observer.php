@@ -17,7 +17,7 @@ class Enru_StockStatus_Model_Observer {
 		$qty = $stockData['qty'];
 
 		// if it's a configurable product
-		if($product->getTypeId() == 'configurable' && $product->getId()) {
+		if($product->getData('type_id') == 'configurable' && $product->getId()) {
 			// tally up qty of assoc products
 			$qty=0;
 			$data = $product->getConfigurableProductsData();
@@ -29,6 +29,11 @@ class Enru_StockStatus_Model_Observer {
 					$qty += $sqty; 
 				}   
 			} 
+			else {
+                        	// bail because this isn't a post from product save page
+                                // we have no associated  products
+                                return;
+                        }
 		}
 
 		// update the stock to in or out of stock depending on current qty
